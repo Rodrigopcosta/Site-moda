@@ -1,0 +1,233 @@
+/* Reset */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+/* Container */
+.conteiner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho */
+.header-top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #162028;
+    position: relative;
+    z-index: 1;
+}
+
+.logotipo {
+    margin-left: 2px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url(/img/logo.png);
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.menu-hamburguer {
+    margin-right: 10px;
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #425564;
+}
+
+/* Menu */
+.header-nav ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header-nav li {
+    margin: 0 10px;
+    padding: 10px;
+}
+
+.header-nav a {
+    color: #425564;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 2px;
+    transition: color 0.3s linear;
+}
+
+.header-nav a:hover {
+    color: white;
+}
+
+/* Imagem principal */
+.foto-principal {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Article */
+.portfolio {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.portfolio h1 {
+    font-size: 36px;
+    color: #252525;
+}
+
+.portfolio p {
+    font-size: 16px;
+    line-height: 2;
+    color: #555;
+}
+
+/* Cards */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    padding: 0 10%;
+}
+
+.gallery-card {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    text-align: center;
+}
+
+.gallery-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.gallery-title {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Sobre */
+.About {
+    background-color: #003d52;
+    padding: 50px 10%;
+    color: white;
+    background-image: url(../img/Desafio\ 2/bg_detalhe.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    border-radius: 25px 0 25px 0;
+    text-align: center;
+}
+
+.about h2 {
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: normal;
+}
+
+.about p {
+    line-height: 1.5;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Contato */
+#contact {
+    margin: 50px 0;
+    text-align: center;
+}
+
+#contact address {
+    color: #143f52;
+    text-transform: uppercase;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.maps {
+    width: 100%;
+    height: 450px;
+    margin-top: 15px;
+}
+
+.maps iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* Rodapé */
+.rodape {
+    background-color: #0b171f;
+    padding: 25px;
+    font-size: 12px;
+    color: #6f8597;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .conteiner {
+        margin: 0 5%;
+    }
+
+    .gallery-card {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-hamburguer {
+        display: block;
+    }
+
+    .header-nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 0;
+        background-color: #162028;
+    }
+
+    .header-nav ul.active {
+        display: flex;
+    }
+
+    .header-nav li {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .gallery-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .About {
+        padding: 50px 5%;
+    }
+
+    .portfolio {
+        padding: 50px 5%;
+    }
+}
